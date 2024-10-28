@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital@0;1&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Contact form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+</head>
+<body>
+
+<main>
+  <h1>Contact Us</h1>
+
+  <form> 
+
+    <label for="name" class="nombre">
+      First Name *<br>
+      <input type="text" name="name" id="name" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"  title="This field is required" required data-required>
+      
+    </label>
+    <label for="last" class="nombre">
+      Last Name *<br>
+      <input type="text" name="last" id="last" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"  title="This field is required" required data-required>
+      
+    </label>
+
+    <label for="email" class="email">
+      Email Address *<br>
+      <input type="text" name="email" id="email" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9\-]+(\.[a-z0-9\-]+)*(\.[a-z]{2,15})$"  title="Please enter a valid email address" required data-required>
+     
+    </label>
+
+
+    
+    <div class="query">
+        <p>Query Type *</p>
+        <div class="queryInput">
+          <input type="radio" name="query" class="radios" id="general" required>
+          <label for="general" >
+            General Enquiry
+          </label>
+          
+        </div>
+    
+      
+        <div data-required id="sopport1" class="queryInput" title="Please select a query type">
+          <input type="radio" name="query" class="radios" id="sopport" required>
+          <label for="sopport" >
+            Support Request
+          </label>
+          
+        </div>
+     
+  </div>
+
+  <label for="message" class="message">
+    <p>Message *</p>
+    
+    <textarea name="message" id="message" data-pattern="^.{1,255}$" title="This field is required"  required data-required></textarea>
+    
+  </label>
+
+  <label for="aceptar" class="aceptar">
+    <input type="checkbox" id="aceptar" name="aceptar" required>
+    I consent to being contacted by the team *
+    <br data-required id="aceptar" title="To submit this form, please consent to being contacted">
+    
+  </label>
+  
+  <button class="btn_submit">Submit</button>
+
+  </form>
+</main>
+  <!-- 
+  
+  This field is required
+
+  Message Sent!
+  Thanks for completing the form. We'll be in touch soon! -->
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
